@@ -20,12 +20,12 @@ El conjunto de polígonos con el que ejemplificaré se muestra en la
 library(tidyverse)
 library(sf)
 
-poligono_ejemplo <- st_read("data/poligonos_Distancias.shp") 
+poligono_ejemplo <- st_read("https://github.com/Rodpach/distanciasMinimas/raw/refs/heads/master/data/poligonos_Distancias.gpkg") |> st_set_geometry("geometry")
 ```
 
     Reading layer `poligonos_Distancias' from data source 
-      `/home/pacheco/Documents/R/distanciasMinimas/data/poligonos_Distancias.shp' 
-      using driver `ESRI Shapefile'
+      `https://github.com/Rodpach/distanciasMinimas/raw/refs/heads/master/data/poligonos_Distancias.gpkg' 
+      using driver `GPKG'
     Simple feature collection with 7 features and 1 field
     Geometry type: POLYGON
     Dimension:     XY
@@ -154,16 +154,16 @@ nuestros polígonos a un perímetro, representado por
 <a href="#fig-5" class="quarto-xref">Figure 5</a>.
 
 ``` r
-perimetro <- st_read("data/poligonos_Perimetro.shp")
+perimetro <- st_read("https://github.com/Rodpach/distanciasMinimas/raw/refs/heads/master/data/poligonos_Perimetro.gpkg") |> st_set_geometry("geometry")
 ```
 
     Reading layer `poligonos_Perimetro' from data source 
-      `/home/pacheco/Documents/R/distanciasMinimas/data/poligonos_Perimetro.shp' 
-      using driver `ESRI Shapefile'
-    Simple feature collection with 1 feature and 1 field
+      `https://github.com/Rodpach/distanciasMinimas/raw/refs/heads/master/data/poligonos_Perimetro.gpkg' 
+      using driver `GPKG'
+    Simple feature collection with 7 features and 1 field
     Geometry type: POLYGON
     Dimension:     XY
-    Bounding box:  xmin: -102.4985 ymin: 19.38849 xmax: -101.7193 ymax: 19.90325
+    Bounding box:  xmin: -102.241 ymin: 19.51385 xmax: -101.832 ymax: 19.81226
     Geodetic CRS:  WGS 84
 
 ``` r
