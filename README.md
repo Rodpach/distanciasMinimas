@@ -160,10 +160,10 @@ perimetro <- st_read("https://github.com/Rodpach/distanciasMinimas/raw/refs/head
     Reading layer `poligonos_Perimetro' from data source 
       `https://github.com/Rodpach/distanciasMinimas/raw/refs/heads/master/data/poligonos_Perimetro.gpkg' 
       using driver `GPKG'
-    Simple feature collection with 7 features and 1 field
+    Simple feature collection with 1 feature and 1 field
     Geometry type: POLYGON
     Dimension:     XY
-    Bounding box:  xmin: -102.241 ymin: 19.51385 xmax: -101.832 ymax: 19.81226
+    Bounding box:  xmin: -102.4985 ymin: 19.38849 xmax: -101.7193 ymax: 19.90325
     Geodetic CRS:  WGS 84
 
 ``` r
@@ -183,10 +183,12 @@ calcular distancia mínima de polígonos hacia el perímetro más cercano.
 </div>
 
 El perímetro lo segmentizamos a puntos con distancias equidistantes y lo
-transformamos a puntos. Posteriormente aplicamos la fución entre los
-puntos que constituyen nuestros polígonos y los puntos equidistantes.
-Sus distancias de muestras en la
-<a href="#fig-6" class="quarto-xref">Figure 6</a>:
+transformamos a una capa de puntos. Posteriormente aplicamos la fución
+entre los puntos que constituyen el polígonos perimetral y los puntos
+equidistantes. En el argumento `id` se indica la columna que categórica
+que identifica los puntos con los polígonos al que pertenece. Sus
+distancias de muestras en la
+<a href="#fig-6" class="quarto-xref">Figure 6</a>.:
 
 ``` r
 #SEGMENTIZA A UN POLIGONO CON CREADO POR VECTORES SEPARDOS EQUIDISTANTES A UNA DISTANCIA dfMaxLength = X.
