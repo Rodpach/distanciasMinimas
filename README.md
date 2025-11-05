@@ -63,7 +63,7 @@ La <a href="#fig-3" class="quarto-xref">Figure 3</a> muestra
 
 ``` r
 #Carga la función
-source("Functions/min_connectionsPolygons.R")
+source("https://raw.githubusercontent.com/Rodpach/distanciasMinimas/refs/heads/master/Functions/min_connectionsPolygons.R")
 
 poligono_ejemplo_lineas_overLT = min_connectionsPolygons(polygon_shape =  poligono_ejemplo, overlap_connection = T)
 
@@ -131,7 +131,7 @@ Figure 4: Centroides de polígonos
 
 ``` r
 #Carga la función
-source("Functions/min_connectionsPoints.R")
+source("https://raw.githubusercontent.com/Rodpach/distanciasMinimas/refs/heads/master/Functions/min_connectionsPoints.R")
 
 puntos_ejemplo_lineas <- min_connectionsPoints(puntos_ejemplo_centroid)
 
@@ -201,7 +201,7 @@ puntos_pol = st_cast(poligono_ejemplo, 'POINT')
 
 ``` r
 #CARGA LA FUNCIÓN
-source("Functions/min_distPoints2Obj.R")
+source("https://raw.githubusercontent.com/Rodpach/distanciasMinimas/refs/heads/master/Functions/min_distPoints2Obj.R")
 
 lineas_minimas_FocalesObjetivo = min_distPoints2Obj(puntos_pol, id = "id", puntosObj = buffer_densified_poly)
 
